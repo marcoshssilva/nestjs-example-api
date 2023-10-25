@@ -7,13 +7,12 @@ export class UserController {
   constructor(private userService: UserService) {}
 
   @Post('/')
-  create(@Body() user: UserDto) {
-    this.userService.create(user);
-    return 'CREATED';
+  create(@Body() user: UserDto): Promise<UserDto> {
+    return this.userService.create(user);
   }
 
   @Get('/')
-  findAll() {
+  findAll(): Promise<UserDto[]> {
     return this.userService.findAll();
   }
 }
