@@ -1,2 +1,2 @@
 @Library('nodejs@main') _
-pipelineNodeJs()
+pipelineNodeJs21()
